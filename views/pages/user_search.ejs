@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+
+<% include ../partials/nav.ejs %>
+
+<div class="container">
+
+<title>User Search</title>
+<br><body>This is PET app</body><br>
+<form method="post">
+  Email:<br>
+<br><input type="text" name="email"><br>
+
+
+   <br> <button type="submit">Get Information</button>
+      <p>
+    
+      <% for(var i=0; i<output.length; i++) {%>
+        First Name: <%if (output[i]) {%> <%=output[i].fname %> <%}%>  <br>
+        Last Name:  <%=output[i].lname %> <br>
+        Phone number:  <%=output[i].phone %> <br>
+        
+
+<% } %>
+
+   
+</p>
+</form>
+</html>
+</html>

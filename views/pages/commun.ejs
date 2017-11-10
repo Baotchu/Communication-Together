@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+<body>
+<% include ../partials/nav.ejs %>
+<div class="container">
+<h2>Communication Together (PET APP)</h2>
+
+
+<br><form method="post" action="/commun/sendmess">
+ Phone number: <input type="text" name="phonenumber"><br>
+  <table>
+      <tr>
+            <br><td><textarea name="message">Enter text here...</textarea><br></td>  
+      </tr>
+      <tr> 
+           <td><br><button id="sendmessenger" type="submit">Send Messenger</button><br></td>
+      </tr>
+  </table>
+</form>
+<form method="post" action="/commun/call">
+    <table>
+           <tr><td> <a href="http://localhost:3000">Call Progress</a></td></tr><br>
+           
+    </table>       
+</form>
+<form method="post" action="/commun/sendemail">
+ <br>Email: <input type="text" name="email"><br>
+<br><td><textarea name="emailbox">Enter text here...</textarea><br></td>  
+
+ <br><button id="sendemail" type="submit">Send Email</button><br>
+</form>
+</div>
+</body>
+</html>
